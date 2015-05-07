@@ -1,0 +1,43 @@
+
+
+Chosen Regression Summary of Analysis
+
+Call:
+lm(formula = cse ~ ec.in + q.in + ec.out + q.out + t.out + ec.in:ec.out + 
+    ec.in:q.out + ec.in:di + q.in:q.out + q.in:t.out + ec.out:q.out + 
+    ec.out:t.out, data = y[-nas, ], na.action = na.exclude)
+
+Residuals:
+            Min              1Q          Median              3Q             Max 
+-3.558298480898 -0.891997962063 -0.002447393952  0.827907369902  4.805781168035 
+
+Coefficients:
+                       Estimate         Std. Error  t value   Pr(>|t|)    
+(Intercept)   1.88893601363e+01  3.51834624578e+00  5.36882 2.9552e-07 ***
+ec.in        -6.13503608596e+00  1.61412593245e+00 -3.80084 0.00020917 ***
+q.in         -4.45438608241e-02  1.44707349334e-02 -3.07820 0.00247677 ** 
+ec.out       -1.84324691456e+00  8.30424820425e-01 -2.21964 0.02794357 *  
+q.out         5.40079384446e-02  1.44443761973e-02  3.73903 0.00026224 ***
+t.out        -3.68284850115e-01  8.51201343467e-02 -4.32665 2.7510e-05 ***
+ec.in:ec.out  1.43135418612e+00  3.69179949599e-01  3.87712 0.00015767 ***
+ec.in:q.out   1.05880196199e-02  5.02007662600e-03  2.10914 0.03659392 *  
+ec.in:di      5.50571665183e-02  7.29293566254e-03  7.54938 3.9460e-12 ***
+q.in:q.out   -1.04080061760e-04  2.82311775878e-05 -3.68671 0.00031688 ***
+q.in:t.out    1.78375048496e-03  6.08154928504e-04  2.93305 0.00388363 ** 
+ec.out:q.out -1.67314457660e-02  3.36224958887e-03 -4.97627 1.7568e-06 ***
+ec.out:t.out  6.41770074782e-02  2.09278123656e-02  3.06659 0.00256904 ** 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 1.58219218427 on 150 degrees of freedom
+Multiple R-squared:  0.765478306254,	Adjusted R-squared:  0.746716570754 
+F-statistic: 40.7999732362 on 12 and 150 DF,  p-value: < 2.220446049e-16
+
+
+
+Statistics of Measured, Fitted, and Residual values
+
+             Min  P_2.5      Mean P_97.5    Max    SD    Skew  Kurt
+Measures   4.280  4.543 1.078e+01 15.500 17.800 3.144 -0.3242 2.313
+Fitted     2.983  4.182 1.078e+01 15.020 16.790 2.751 -0.6375 3.289
+Residuals -3.558 -3.055 5.581e-19  3.875  4.806 1.522  0.4039 3.711

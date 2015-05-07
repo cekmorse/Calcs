@@ -1,0 +1,28 @@
+CSe Error Analysis
+
+Difference Model (DSe-Se)
+
+Goodness-of-fit statistics
+                                     1-mle-norm       2-mle-logis
+Kolmogorov-Smirnov statistic  0.265121678339297 0.177256032291696
+Cramer-von Mises statistic    2.132256881718521 0.862511589291599
+Anderson-Darling statistic   10.833354425608917 5.090611473985675
+
+Goodness-of-fit criteria
+                                     1-mle-norm      2-mle-logis
+Aikake's Information Criterion 103.068188434100 46.5020367595580
+Bayesian Information Criterion 107.832241703448 51.2660900289057
+
+
+Percent Difference Model ((DSe-Se)/Se)
+
+Goodness-of-fit statistics
+                                    1-mle-norm       2-mle-logis
+Kolmogorov-Smirnov statistic 0.178563428159098 0.131661268533436
+Cramer-von Mises statistic   0.916995244958522 0.406843759989518
+Anderson-Darling statistic   4.921695393712255 2.546123974696670
+
+Goodness-of-fit criteria
+                                     1-mle-norm      2-mle-logis
+Aikake's Information Criterion 366.692442818400 344.400601199518
+Bayesian Information Criterion 371.456496087748 349.164654468865

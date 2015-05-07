@@ -1,0 +1,36 @@
+
+
+Chosen Regression Summary of Analysis
+
+Call:
+lm(formula = cse ~ q.in + ec.in + t.in + q.out + q.x + q.out:q.x, 
+    data = y[-nas, ], na.action = na.exclude)
+
+Residuals:
+            Min              1Q          Median              3Q             Max 
+-1.422409100915 -0.470776525916  0.121507840696  0.547486949938  1.473533766124 
+
+Coefficients:
+                      Estimate         Std. Error  t value   Pr(>|t|)    
+(Intercept)  4.35973876776e+01  3.90856923745e+00 11.15431 1.4313e-06 ***
+q.in        -6.51586982680e-03  8.86868322438e-04 -7.34705 4.3409e-05 ***
+ec.in       -1.54789208826e+01  2.45918440968e+00 -6.29433 0.00014194 ***
+t.in        -4.39331458873e-01  8.20754303542e-02 -5.35278 0.00046067 ***
+q.out       -2.42989972884e-02  4.22242169495e-03 -5.75475 0.00027465 ***
+q.x         -5.28941949128e-01  8.02886440187e-02 -6.58800 0.00010066 ***
+q.out:q.x    1.44817919247e-03  1.81292193021e-04  7.98809 2.2400e-05 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 1.08954205478 on 9 degrees of freedom
+Multiple R-squared:  0.944228648645,	Adjusted R-squared:  0.907047747742 
+F-statistic: 25.3955290408 on 6 and 9 DF,  p-value: 3.7201701053e-05
+
+
+
+Statistics of Measured, Fitted, and Residual values
+
+             Min  P_2.5      Mean P_97.5    Max    SD    Skew  Kurt
+Measures   6.620  7.072 1.156e+01 18.560 19.600 3.493  0.7640 2.881
+Fitted     7.265  7.378 1.144e+01 18.160 19.690 3.473  0.8348 2.965
+Residuals -1.422 -1.379 1.735e-17  1.337  1.474 0.844 -0.1914 2.248

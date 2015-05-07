@@ -1,0 +1,17 @@
+Test Statistics for Scaled Residuals from ARKLASCO
+
+
+
+
+
+     'Wins'
+
+
+
+Chosen distribution  -  Logistic
+
+Distribution data is not scaled
+
+
+Test Statistics for Unscaled Residuals
+

@@ -1,0 +1,11 @@
+Test Statistics for Scaled Residuals from HRC194CO
+
+
+
+Insufficent data to perform tests (n<5)
+
+
+Chosen distribution  -  Normal
+
+Distribution data is not scaled
+

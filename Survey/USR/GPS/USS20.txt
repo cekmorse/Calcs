@@ -1,0 +1,2 @@
+Header>> Delimiter(,) FileFormat(Name,Lat(North),Lon(East),Ht,Ht(G),Codes) <<
+1,456302.436,1092457.773,1207.430,1207.430,

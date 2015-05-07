@@ -1,0 +1,30 @@
+
+
+Chosen Regression Summary of Analysis
+
+Call:
+lm(formula = cse ~ q.x, data = y, na.action = na.exclude)
+
+Residuals:
+              1               2               3               4 
+-1.248938095969  1.306518180912 -0.270829004168  0.213248919224 
+
+Coefficients:
+                    Estimate       Std. Error  t value  Pr(>|t|)   
+(Intercept) 20.4141363651459  1.2279582796201 16.62445 0.0035988 **
+q.x         -0.5035497836867  0.0944650230402 -5.33054 0.0334379 * 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 1.30108792471 on 2 degrees of freedom
+Multiple R-squared:  0.934242278723,	Adjusted R-squared:  0.901363418085 
+F-statistic: 28.4146792371 on 1 and 2 DF,  p-value: 0.0334379074663
+
+
+
+Statistics of Measured, Fitted, and Residual values
+
+             Min  P_2.5      Mean P_97.5    Max    SD     Skew  Kurt
+Measures   9.650  9.976 1.486e+01 19.260 19.500 4.143 -0.21420 1.819
+Fitted     9.437  9.799 1.486e+01 18.150 18.190 4.004 -0.62100 1.801
+Residuals -1.249 -1.176 2.776e-17  1.225  1.307 1.062  0.08729 1.868

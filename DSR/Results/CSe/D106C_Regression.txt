@@ -1,0 +1,85 @@
+Analysis of Selenium Concentrations at D106C 
+
+Tested regressions
+
+Test 1
+Start:  AIC=114.2
+cse ~ ec.out + q.out + t.out
+
+         Df      Sum of Sq            RSS            AIC
+- q.out   1  3.31589170635 529.7745163557 112.4608379898
+<none>                     526.4586246494 114.1971312307
+- ec.out  1 44.87899052839 571.3376151778 115.6330488395
+- t.out   1 75.09662564018 601.5552502896 117.7976482179
+
+Step:  AIC=112.46
+cse ~ ec.out + t.out
+
+         Df      Sum of Sq            RSS            AIC
+<none>                     529.7745163557 112.4608379898
+- ec.out  1 50.89597159102 580.6704879467 114.3135809141
+- t.out   1 85.99531049229 615.7698268480 116.7785519438
+
+
+Test 2
+
+
+Test 3
+
+
+Test 4
+Start:  AIC=113.94
+cse ~ (ec.out + q.out + t.out) * (ec.out + q.out + t.out)
+
+               Df      Sum of Sq            RSS            AIC
+- ec.out:q.out  1 11.43564404027 464.9903820443 112.9825783392
+- q.out:t.out   1 13.01269112643 466.5674291304 113.1247832353
+<none>                           453.5547380040 113.9367464988
+- ec.out:t.out  1 22.57596765609 476.1307056601 113.9769571791
+
+Step:  AIC=112.98
+cse ~ ec.out + q.out + t.out + ec.out:t.out + q.out:t.out
+
+               Df      Sum of Sq            RSS            AIC
+- q.out:t.out   1  7.93594426222 472.9263263065 111.6933399891
+<none>                           464.9903820443 112.9825783392
+- ec.out:t.out  1 47.73831171339 512.7286937576 115.0872434466
+
+Step:  AIC=111.69
+cse ~ ec.out + q.out + t.out + ec.out:t.out
+
+               Df      Sum of Sq            RSS            AIC
+- q.out         1  9.15063071284 482.0769570193 110.4982340853
+<none>                           472.9263263065 111.6933399891
+- ec.out:t.out  1 53.53229834289 526.4586246494 114.1971312307
+
+Step:  AIC=110.5
+cse ~ ec.out + t.out + ec.out:t.out
+
+               Df     Sum of Sq            RSS            AIC
+<none>                          482.0769570193 110.4982340853
+- ec.out:t.out  1 47.6975593364 529.7745163557 112.4608379898
+
+
+Test 5
+
+
+Test 6
+
+
+Test 7
+
+
+Test 8
+
+
+Test 9
+
+
+Test 10
+
+
+Test 11
+
+
+End of Tests

@@ -1,0 +1,53 @@
+Analysis of Selenium Concentrations at D101C 
+
+Tested regressions
+
+Test 1
+Start:  AIC=85.31
+cse ~ ec.in + q.in + t.in
+
+        Df      Sum of Sq            RSS            AIC
+<none>                    264.6515656350 85.31126882668
+- ec.in  1 16.16562186397 280.8171874990 85.80143896356
+- t.in   1 34.80106837208 299.4526340071 88.50003873461
+- q.in   1 48.97213305515 313.6236986902 90.44201795990
+
+
+Test 2
+
+
+Test 3
+Start:  AIC=84.28
+cse ~ (ec.in + t.in + q.in) * (ec.in + t.in + q.in)
+
+             Df      Sum of Sq            RSS            AIC
+- t.in:q.in   1 2.582655587431 226.4627009936 82.76624677728
+- ec.in:t.in  1 8.618139809306 232.4981852155 83.87093764993
+- ec.in:q.in  1 9.595411470047 233.4754568762 84.04710842966
+<none>                         223.8800454062 84.28451269929
+
+Step:  AIC=82.77
+cse ~ ec.in + t.in + q.in + ec.in:t.in + ec.in:q.in
+
+             Df      Sum of Sq            RSS            AIC
+<none>                         226.4627009936 82.76624677728
+- ec.in:t.in  1 11.53861964533 238.0013206389 82.85347737958
+- ec.in:q.in  1 13.77116119552 240.2338621891 83.24561676888
+
+
+Test 4
+
+
+Test 5
+
+
+Test 6
+
+
+Test 7
+
+
+Test 8
+
+
+End of Tests
