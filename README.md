@@ -1,5 +1,5 @@
 # Calcs
-Thesis Calculations performed with R.
+Thesis Calculations performed with R.  (View in RAW format for easier reading)
 
 These files are used to support my MS thesis titled 
 STOCHASTIC ESTIMATION OF GROUNDWATER RETURN FLOW AND DISSOLVED SELENIUM LOADING 
