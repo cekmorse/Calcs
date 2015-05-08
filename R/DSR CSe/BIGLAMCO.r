@@ -1,4 +1,4 @@
-source("~/Projects/Thesis/Thesis-Calcs/R/DSR CSe/Pre-Loader.R")
+source("~/Projects/Calcs/R/DSR CSe/Pre-Loader.R")
 
 ###  READ AND EDIT DATA  ###
 loadA <- "aDBIG.Rdata"

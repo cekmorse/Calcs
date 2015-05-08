@@ -1,11 +1,11 @@
 ##### General Setup #####
-source("~/Projects/Thesis/Thesis-Calcs/R/USR/Pre-Loader.R")
+source("~/Projects/Calcs/R/USR/Pre-Loader.R")
 
 setwd(modelsFile)
 load("date.Rdata")
 
 run1 <- function(){
-  source("~/Projects/Thesis/Thesis-Calcs/R/SubScripts/River Geometry Plots.R")
+  source("~/Projects/Calcs/R/SubScripts/River Geometry Plots.R")
 }
 
 segment <- "A"

@@ -27,10 +27,10 @@ panel.points <- function(x, y) {
 plot.script <- function()
 {
   if (region == "USR") {
-    source("~/Projects/Thesis/Thesis-Calcs/R/USR CSe/USRCSeSubScript.R")
+    source("~/Projects/Calcs/R/USR CSe/USRCSeSubScript.R")
   }
   if (region == "DSR") {
-    source("~/Projects/Thesis/Thesis-Calcs/R/DSR CSe/DSRCSeSubScript.R")
+    source("~/Projects/Calcs/R/DSR CSe/DSRCSeSubScript.R")
   }
 }
 

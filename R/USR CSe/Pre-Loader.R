@@ -11,14 +11,14 @@ rm(list.of.packages, new.packages)
 if(.Platform$OS.type == "unix")
 {
   ## Mac/Linux file naming convention
-  dataFile <- "~/Projects/Thesis/Thesis-Calcs/USR/Data/"
-  plotFile <- "~/Projects/Thesis/Thesis-Calcs/USR/Plots/CSe/"
-  resultsFile <- "~/Projects/Thesis/Thesis-Calcs/USR/Results/CSe/"
-  modelsFile <- "~/Projects/Thesis/Thesis-Calcs/USR/Models/CSe/"
+  dataFile <- "~/Projects/Calcs/USR/Data/"
+  plotFile <- "~/Projects/Calcs/USR/Plots/CSe/"
+  resultsFile <- "~/Projects/Calcs/USR/Results/CSe/"
+  modelsFile <- "~/Projects/Calcs/USR/Models/CSe/"
 } else {
   ## Windows file naming convention
   ## add these when converting to Windows OS
 }
 
 ###  LOAD FUNCTIONS  ###
-source("~/Projects/Thesis/Thesis-Calcs/R/USR CSe/SeFunctions.R")
+source("~/Projects/Calcs/R/USR CSe/SeFunctions.R")

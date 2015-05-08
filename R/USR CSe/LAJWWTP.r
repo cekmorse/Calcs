@@ -1,4 +1,4 @@
-source("~/Projects/Thesis/Thesis-Calcs/R/USR CSe/Pre-Loader.R")
+source("~/Projects/Calcs/R/USR CSe/Pre-Loader.R")
 require(nlstools)
 
 ###  READ AND EDIT DATA  ###

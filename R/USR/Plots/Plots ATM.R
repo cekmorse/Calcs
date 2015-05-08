@@ -1,6 +1,6 @@
 ##### General Setup #####
-source("~/Projects/Thesis/Thesis-Calcs/R/USR/Pre-Loader.R")
-source("~/Projects/Thesis/Thesis-Calcs/R/SubScripts/polylims.R")
+source("~/Projects/Calcs/R/USR/Pre-Loader.R")
+source("~/Projects/Calcs/R/SubScripts/polylims.R")
 
 setwd(modelsFile)  # Set working directory
 

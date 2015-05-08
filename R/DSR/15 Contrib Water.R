@@ -1,5 +1,5 @@
 ##### General Setup #####
-source("~/Projects/Thesis/Thesis-Calcs/R/DSR/Pre-Loader.R")
+source("~/Projects/Calcs/R/DSR/Pre-Loader.R")
 
 setwd(modelsFile)
 load("m storageChange.Rdata")
@@ -34,7 +34,7 @@ stats <- t(data.frame(Store=ssStorage, Flow=ssFlow, Atm=ssAtm))
 setwd(resultsFile)
 write.csv(stats, "m contrib water.csv")
 
-setwd("~/Projects/Thesis/Thesis-Text/Tables/")
+setwd("~/Projects/Text/Tables/")
 zz <- textConnection("foo", open="w")
 sink(zz)
 cat("\\begin{tabular}{cccc} \n",

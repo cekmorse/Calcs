@@ -1,8 +1,8 @@
 ##### General Setup #####
-source("~/Projects/Thesis/Thesis-Calcs/R/DSR/Pre-Loader.R")
+source("~/Projects/Calcs/R/DSR/Pre-Loader.R")
 
 run1 <- function(){
-  source("~/Projects/Thesis/Thesis-Calcs/R/SubScripts/D River Geometry.R")
+  source("~/Projects/Calcs/R/SubScripts/D River Geometry.R")
 }
 setwd(dataFile)
 DSRvar <- read.csv("data.csv", header=TRUE)

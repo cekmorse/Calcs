@@ -1,8 +1,8 @@
 ##### General Setup #####
-source("~/Projects/Thesis/Thesis-Calcs/R/USR/Pre-Loader.R")
+source("~/Projects/Calcs/R/USR/Pre-Loader.R")
 
 run1 <- function(){
-  source("~/Projects/Thesis/Thesis-Calcs/R/SubScripts/Transport and Storage Plots.R")
+  source("~/Projects/Calcs/R/SubScripts/Transport and Storage Plots.R")
 }
 
 ylabel1 <- expression("Mass Flux"~~(kg %.% day^-1 %.% km^-1))

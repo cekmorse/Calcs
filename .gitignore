@@ -17,3 +17,4 @@ vignettes/*.pdf
 
 # Rdata files - these were created by the R code
 *.Rdata
+.Rproj.user

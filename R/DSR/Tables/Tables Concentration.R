@@ -1,6 +1,6 @@
 ##### General Setup #####
-source("~/Projects/Thesis/Thesis-Calcs/R/DSR/Pre-Loader.R")
-saveFolder <- "~/Projects/Thesis/Thesis-Text/Tables/"
+source("~/Projects/Calcs/R/DSR/Pre-Loader.R")
+saveFolder <- "~/Projects/Text/Tables/"
 
 setwd(modelsFile)
 load("date.Rdata")

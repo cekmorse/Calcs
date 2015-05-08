@@ -1,8 +1,8 @@
 ##### General Setup #####
-source("~/Projects/Thesis/Thesis-Calcs/R/DSR/Pre-Loader.R")
+source("~/Projects/Calcs/R/DSR/Pre-Loader.R")
 
 run <- function() {
-  source("~/Projects/Thesis/Thesis-Calcs/R/SubScripts/River Geometry.R")
+  source("~/Projects/Calcs/R/SubScripts/River Geometry.R")
 }
 
 dMin <- 0.5*0.3048

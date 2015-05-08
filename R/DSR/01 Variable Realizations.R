@@ -1,8 +1,8 @@
 ##### General Setup #####
-source("~/Projects/Thesis/Thesis-Calcs/R/DSR/Pre-Loader.R")
+source("~/Projects/Calcs/R/DSR/Pre-Loader.R")
 
 runCalcs <- function() {
-  source("~/Projects/Thesis/Thesis-Calcs/R/SubScripts/InvarCalcReals.R")
+  source("~/Projects/Calcs/R/SubScripts/InvarCalcReals.R")
 }
 
 reals <- 5000

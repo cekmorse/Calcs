@@ -1,13 +1,13 @@
 if(.Platform$OS.type == "unix")
 {
   ## Mac/Linux file naming convention
-  source("~/Projects/Thesis/Thesis-Calcs/R/USR D/01 Variable Realizations.R")
-  source("~/Projects/Thesis/Thesis-Calcs/R/USR D/05 River Geometry.R")
-  source("~/Projects/Thesis/Thesis-Calcs/R/USR D/06 Conc Realizations-Data Setup.R")
-  source("~/Projects/Thesis/Thesis-Calcs/R/USR D/07 ETref to Evap Realizations.R")
-  source("~/Projects/Thesis/Thesis-Calcs/R/USR D/08 Conc Realizations.R")
-  source("~/Projects/Thesis/Thesis-Calcs/R/USR D/09 Transport and Storage.R")
-  source("~/Projects/Thesis/Thesis-Calcs/R/USR D/10 Water and Mass Models.R")
+  source("~/Projects/Calcs/R/USR D/01 Variable Realizations.R")
+  source("~/Projects/Calcs/R/USR D/05 River Geometry.R")
+  source("~/Projects/Calcs/R/USR D/06 Conc Realizations-Data Setup.R")
+  source("~/Projects/Calcs/R/USR D/07 ETref to Evap Realizations.R")
+  source("~/Projects/Calcs/R/USR D/08 Conc Realizations.R")
+  source("~/Projects/Calcs/R/USR D/09 Transport and Storage.R")
+  source("~/Projects/Calcs/R/USR D/10 Water and Mass Models.R")
 } else {
   ## Windows file naming convention
   ## Check these before using!!!!

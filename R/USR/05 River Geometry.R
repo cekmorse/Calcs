@@ -1,8 +1,8 @@
 ##### General Setup #####
-source("~/Projects/Thesis/Thesis-Calcs/R/USR/Pre-Loader.R")
+source("~/Projects/Calcs/R/USR/Pre-Loader.R")
 
 run <- function() {
-  source("~/Projects/Thesis/Thesis-Calcs/R/SubScripts/River Geometry.R")
+  source("~/Projects/Calcs/R/SubScripts/River Geometry.R")
 }
 
 ####################### SEGMENT A

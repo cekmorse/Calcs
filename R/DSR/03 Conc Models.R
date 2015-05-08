@@ -1,8 +1,8 @@
 ##### General Setup #####
-source("~/Projects/Thesis/Thesis-Calcs/R/DSR/Pre-Loader.R")
+source("~/Projects/Calcs/R/DSR/Pre-Loader.R")
 
 run <- function() {
-  source("~/Projects/Thesis/Thesis-Calcs/R/SubScripts/ConcModelCalcs.R")
+  source("~/Projects/Calcs/R/SubScripts/ConcModelCalcs.R")
 }
 
 setwd(dataFile)

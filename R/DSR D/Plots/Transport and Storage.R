@@ -1,8 +1,8 @@
 ##### General Setup #####
-source("~/Projects/Thesis/Thesis-Calcs/R/DSR/Pre-Loader.R")
+source("~/Projects/Calcs/R/DSR/Pre-Loader.R")
 
 run1 <- function(){
-  source("~/Projects/Thesis/Thesis-Calcs/R/SubScripts/D Transport and Storage Plots.R")
+  source("~/Projects/Calcs/R/SubScripts/D Transport and Storage Plots.R")
 }
 
 setwd(models.D)

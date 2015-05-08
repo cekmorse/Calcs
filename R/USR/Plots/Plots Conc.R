@@ -1,12 +1,12 @@
 ##### General Setup #####
-source("~/Projects/Thesis/Thesis-Calcs/R/USR/Pre-Loader.R")
+source("~/Projects/Calcs/R/USR/Pre-Loader.R")
 
 run1 <- function(){
-  source("~/Projects/Thesis/Thesis-Calcs/R/SubScripts/ConcModelPlots-USR.R")
+  source("~/Projects/Calcs/R/SubScripts/ConcModelPlots-USR.R")
 }
 
 run2 <- function(){
-  source("~/Projects/Thesis/Thesis-Calcs/R/SubScripts/ConcModelPlots2.R")
+  source("~/Projects/Calcs/R/SubScripts/ConcModelPlots2.R")
 }
 
 

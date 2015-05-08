@@ -1,12 +1,12 @@
 ##### General Setup #####
-source("~/Projects/Thesis/Thesis-Calcs/R/DSR/Pre-Loader.R")
+source("~/Projects/Calcs/R/DSR/Pre-Loader.R")
 
 run1 <- function(){
-  source("~/Projects/Thesis/Thesis-Calcs/R/SubScripts/ConcModelPlots-DSR.R")
+  source("~/Projects/Calcs/R/SubScripts/ConcModelPlots-DSR.R")
 }
 
 run2 <- function(){
-  source("~/Projects/Thesis/Thesis-Calcs/R/SubScripts/ConcModelPlots2.R")
+  source("~/Projects/Calcs/R/SubScripts/ConcModelPlots2.R")
 }
 
 setwd(dataFile)

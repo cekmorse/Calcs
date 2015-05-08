@@ -1,5 +1,5 @@
 ##### General Setup #####
-source("~/Projects/Thesis/Thesis-Calcs/R/DSR/Pre-Loader.R")
+source("~/Projects/Calcs/R/DSR/Pre-Loader.R")
 
 setwd(dataFile)
 # Trim depths to 0.5 <= H <= 5'
@@ -14,7 +14,7 @@ for(i in 1:max(ds$Section)){
   h <- ds[which(ds$Section==i),which(colnames(ds)=="H")]
   tw <- ds[which(ds$Section==i),which(colnames(ds)=="Tw")]
   dx <- data.frame(tw=tw, h=h)
-  source("~/Projects/Thesis/Thesis-Calcs/R/SubScripts/Survey 1.R")
+  source("~/Projects/Calcs/R/SubScripts/Survey 1.R")
   AB[i,] <- cbind(a,b,rse)
   R <- append(R, r)
 }

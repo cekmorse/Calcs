@@ -1,5 +1,5 @@
 ##### General Setup #####
-source("~/Projects/Thesis/Thesis-Calcs/R/DSR/Pre-Loader.R")
+source("~/Projects/Calcs/R/DSR/Pre-Loader.R")
 
 runS <- function(){
   p97 <- apply(x, 1, quantile, probs=0.975, na.rm=TRUE)

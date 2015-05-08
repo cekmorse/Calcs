@@ -1,12 +1,12 @@
 ##### General Setup #####
-source("~/Projects/Thesis/Thesis-Calcs/R/USR/Pre-Loader.R")
+source("~/Projects/Calcs/R/USR/Pre-Loader.R")
 
 run1 <- function(){
-  source("~/Projects/Thesis/Thesis-Calcs/R/SubScripts/Water and Mass Model Plots.R")
+  source("~/Projects/Calcs/R/SubScripts/Water and Mass Model Plots.R")
 }
 
 ylabel1 <- expression(Cumulative~Volume~Change~~(m^3*day^-1*km^-1))
-ylabel2 <- expression(Cumulative~Se~Mass~Change~~(m^3*day^-1*km^-1))
+ylabel2 <- expression(Cumulative~Se~Mass~Change~~(kg*day^-1*km^-1))
 ylabel3 <- expression(Se~Concentration~~(C[Se])~(mu*g~L^-1))
 
 setwd(modelsFile)
