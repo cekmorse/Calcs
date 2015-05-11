@@ -12,7 +12,7 @@ run1 <- function(findFile) {
   return(returnList)
 }
 
-textTablesFolder <- "~/Projects/Thesis/Thesis-Text/Tables/"
+textTablesFolder <- "~/Projects/Text/Tables/"
 
 findFile <- "storageChange"
 saveFile <- "DSRVolume.txt"
@@ -71,3 +71,10 @@ scaleConvert <- 1           # no scaling
 unitConvert <- 2.20462262   # convert to lb/(day*km)
 results <- run1(findFile)
 makeTable(results$determ, results$stoch, scaleConvert, unitConvert, textTablesFolder, saveFile)
+
+findFile <- "unknownC"
+saveFile <- "DSR_C_UNPS.txt"
+# in kg/(day*km) 
+scaleConvert <- 1           # no scaling
+results <- run1(findFile)
+makeSimpleTable(results$determ, results$stoch, scaleConvert, textTablesFolder, saveFile)

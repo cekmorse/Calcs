@@ -69,32 +69,27 @@ ylabel <- ylabel2
 fileName <- "Balance Mass.pdf"
 setwd(plotFile); run1();  setwd(modelsFile)
 
-# load("m unknownCinStats.Rdata")
-# x <- unknownCinStats
-# rm(unknownCinStats)
-# d <- x[,1]; x<-x[,-1]
-# x[x<0] <- 0
-# x <- abs(x)
-# x <- cbind(d,x)
-# colnames(x) <- c("date","P.025","Mean","P.975","SD","Skew","Kurt")
-# oneway <- 1
-# yMinMax <- 600
-# ylabel <- ylabel3
-# fileName <- "Balance Cin.pdf"
-# setwd(plotFile); run1();  setwd(modelsFile)
-# 
-# load("m unknownCoutStats.Rdata")
-# x <- unknownCoutStats
-# rm(unknownCoutStats)
-# d <- x[,1]; x<-x[,-1]
-# x[x>0] <- 0
-# x <- abs(x)
-# x <- cbind(d,x)
-# colnames(x) <- c("date","P.975","Mean","P.025","SD","Skew","Kurt")
-# oneway <- 1
-# yMinMax <- 600
-# ylabel <- ylabel3
-# fileName <- "Balance Cout.pdf"
-# setwd(plotFile); run1();  setwd(modelsFile)
+#####
+load("m unknownCStats.Rdata")
+x <- unknownCStats
+rm(unknownCStats)
+yMinMax <- 600
+ylabel <- ylabel3
+fileName <- "Balance C.pdf"
+setwd(plotFile); run1();  setwd(modelsFile)
+
+load("m unknownCoutStats.Rdata")
+x <- unknownCoutStats
+rm(unknownCoutStats)
+d <- x[,1]; x<-x[,-1]
+x[x>0] <- 0
+x <- abs(x)
+x <- cbind(d,x)
+colnames(x) <- c("date","P.975","Mean","P.025","SD","Skew","Kurt")
+oneway <- 1
+yMinMax <- 600
+ylabel <- ylabel3
+fileName <- "Balance Cout.pdf"
+setwd(plotFile); run1();  setwd(modelsFile)
 
 rm(list=ls())

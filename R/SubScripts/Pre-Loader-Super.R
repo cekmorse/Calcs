@@ -1,5 +1,5 @@
 ###  PROGRAM REQUIREMENTS  ###
-list.of.packages <- c("moments", "KernSmooth", "nlstools", "fitdistrplus", "reshape2", "msm", "MASS", "qpcR", "dplyr")
+list.of.packages <- c("moments", "KernSmooth", "nlstools", "fitdistrplus", "reshape2", "msm", "MASS", "qpcR", "plyr", "dplyr")
 new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
 if(length(new.packages)) install.packages(new.packages)
 options(warn=-1)
