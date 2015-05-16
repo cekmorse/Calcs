@@ -14,6 +14,8 @@ load("calcData.Rdata")
 # Sum(unknown volume changes) = Sum(river storage changes) - Sum(Surface flows) - Sum(Atmospheric contributions)
 #
 ##############!
+reachLengthMiles <- 61.7          	## in miles
+reachLength <- reachLengthMiles * 1.609344	## in kilometers
 
 ##### Sum(river storage changes) #####
 load("volA.Rdata"); vola <- volumeChange
@@ -24,7 +26,7 @@ load("volE.Rdata"); vole <- volumeChange
 
 storageChange <- vola + volb + volc + vold + vole  	# in (m^3/day)
 storageChange <- storageChange / 86400				# in m^3/sec
-storageChange <- storageChange / (61.7 * 1.609344)				# in m^3/(sec*km)
+storageChange <- storageChange / reachLength		# in m^3/(sec*km)
 
 x <- storageChange
 
@@ -44,7 +46,7 @@ rm(vola, volb, volc, vold, vole, storageChangeStatsStats)
 attach(calcData)
 
 flowChange <- q.in - q.HOL - q.RFD - q.FLS + q.RFR + q.TIM - q.FLY + q.CAN - q.CON + q.HRC + q.WTP - q.out
-flowChange <- flowChange / (61.7 * 1.609344)				# in m^3/(sec*km)
+flowChange <- flowChange / reachLength				# in m^3/(sec*km)
 
 x <- flowChange
 
@@ -76,7 +78,7 @@ load("areaE.Rdata"); areaE <- surfaceArea
 surfaceArea <- areaA + areaB + areaC + areaD + areaE			# in m^2
 atmChange <- atm * surfaceArea						# in m^3/day
 atmChange <- atmChange / 86400					# in m^3/sec
-atmChange <- atmChange / (61.7 * 1.609344)					# in m^3/(sec*km)
+atmChange <- atmChange / reachLength					# in m^3/(sec*km)
 
 x <- atmChange
 
@@ -126,7 +128,7 @@ load("f Segment D.Rdata")
 load("f Segment E.Rdata")
 
 massStoreChange <- f.A + f.B + f.C + f.D + f.E
-massStoreChange <- massStoreChange / (61.7 * 1.609344)    # in kg / (sec * km)
+massStoreChange <- massStoreChange / reachLength    # in kg / (sec * km)
 
 x <- massStoreChange
 
@@ -158,7 +160,7 @@ load("f U201.Rdata")
 load("f WTP.Rdata")
 
 massFlux <- f.163 - f.HOL - f.RFD - f.FLS + f.RFR + f.TIM - f.FLY + f.CAN - f.CON + f.HRC + f.WTP - f.U201
-massFlux <- massFlux / (61.7 * 1.609344)				# in kg/(day*km)
+massFlux <- massFlux / reachLength				# in kg/(day*km)
 
 x <- massFlux
 

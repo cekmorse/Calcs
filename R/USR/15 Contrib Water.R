@@ -34,7 +34,7 @@ stats <- t(data.frame(Store=ssStorage, Flow=ssFlow, Atm=ssAtm))
 setwd(resultsFile)
 write.csv(stats, "m contrib water.csv")
 
-setwd("~/Projects/Thesis/Thesis-Text/Tables/")
+setwd("~/Projects/Text/Tables/")
 zz <- textConnection("foo", open="w")
 sink(zz)
 cat("\\begin{tabular}{cccc} \n",
@@ -43,7 +43,7 @@ cat("\\begin{tabular}{cccc} \n",
     "\\toprule \n",
     "$ \\displaystyle \\frac{\\Delta S}{\\Delta t} $ & ", ssStorage[[1]],"  & ", ssStorage[[2]],"	& ", ssStorage[[3]]," \\\\ \n",
     "\\\\ \n",
-    "$ \\displaystyle \\sum Q_{Total} $	& ", ssFlow[[1]],"  & ", ssFlow[[2]],"	& ", ssFlow[[3]]," \\\\ \n",
+    "$ \\displaystyle \\sum Q_{Surface} $	& ", ssFlow[[1]],"  & ", ssFlow[[2]],"	& ", ssFlow[[3]]," \\\\ \n",
     "\\\\ \n",
     "$ \\displaystyle Q_{Atm} $  & ", ssAtm[[1]],"  & ", ssAtm[[2]],"	& ", ssAtm[[3]]," \\\\ \n",
     "\\bottomrule \n",

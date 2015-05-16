@@ -1,52 +1,59 @@
-cflux <- 0.0864                    # m^3/s * ug/L to kg/day conversion
+calcRFlux <- function(flow, conc){
+    # kg/day <- m^3/s * ug/L * C
+    return <- flow  * conc * 0.0864
+}
 
-setwd(outFolder)
+calcSFlux <- function(volumeChange, conc1, conc2){
+    # kg/day <- m^3/day      * ug/L                         * C
+    return <- volumeChange * rowMeans(cbind(conc1,conc2)) * 1E-6
+}
+
+setwd(models.SA)
 attach(cd2)
 
 locate <- "D101C"
 load("c D101C.Rdata")
-f.101 <- q.in * est * cflux
+f.101 <- calcRFlux(q.in, est)
 save(f.101, file=paste("f ",locate,".Rdata",sep=""))
 rm(f.101)
 
 locate <- "BIG"
 load("c BIG.Rdata")
-f.BIG <- q.BIG * est * cflux
+f.BIG <- calcRFlux(q.BIG, est)
 save(f.BIG, file=paste("f ",locate,".Rdata",sep=""))
 rm(f.BIG)
 
 locate <- "BUF"
 load("c BUF.Rdata")
-f.BUF <- q.BUF * est * cflux
+f.BUF <- calcRFlux(q.BUF, est)
 save(f.BUF, file=paste("f ",locate,".Rdata",sep=""))
 rm(f.BUF)
 
 locate <- "WIL"
 load("c WIL.Rdata")
-f.WIL <- q.WIL * est * cflux
+f.WIL <- calcRFlux(q.WIL, est)
 save(f.WIL, file=paste("f ",locate,".Rdata",sep=""))
 rm(f.WIL)
 
 locate <- "FRO"
 load("c D106C.Rdata")                        # Assumed same concentrations as at D106C
-f.FRO <- q.FRO * est * cflux
+f.FRO <- calcRFlux(q.FRO, est)
 save(f.FRO, file=paste("f ",locate,".Rdata",sep=""))
 rm(f.FRO)
 
 locate <- "D106C"
 load("c D106C.Rdata")
-f.106 <- q.out * est * cflux
+f.106 <- calcRFlux(q.out, est)
 save(f.106, file=paste("f ",locate,".Rdata",sep=""))
 rm(f.106)
 
-cflux <- 1E-6
+
 
 locate <- "Segment F"
 load("c D101C.Rdata"); est1 <- est
 load("c BUF.Rdata"); est2 <- est
 load("volf.Rdata")
-est <- (est1 + est2)/2
-f.F <- volumeChange * est * cflux
+f.F <- calcSFlux(volumeChange, est1, est2)
 save(f.F, file=paste("f ",locate,".Rdata",sep=""))
 rm(f.F)
 
@@ -54,8 +61,7 @@ locate <- "Segment G"
 load("c BUF.Rdata"); est1 <- est
 load("c D106C.Rdata"); est2 <- est
 load("volg.Rdata")
-est <- (est1 + est2)/2
-f.G <- volumeChange * est * cflux
+f.G <- calcSFlux(volumeChange, est1, est2)
 save(f.G, file=paste("f ",locate,".Rdata",sep=""))
 rm(f.G)
 

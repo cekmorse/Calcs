@@ -20,12 +20,14 @@ times <- length(dates)
 dMin <- 0.5*0.3048
 dMax <- 5*0.3048
 
+distConv <- 5280 * 0.3048  ## Convert miles to meters
+
 ####################### SEGMENT A
 segment <- "A"                       #EDIT
 depthToday <- USRvar$da.0
 depthToday[which(depthToday < dMin)] <- NA
 depthToday[which(depthToday > dMax)] <- NA
-segmentLength <- 7.8 * 1609.34 #EDIT   A=7.8mi, B=2.4mi, C=19.1mi, D=23.5mi, E=8.9mi, F=23.4mi, G=15.5mi
+segmentLength <- 7.8 * distConv #EDIT   A=7.8mi, B=2.4mi, C=19.1mi, D=23.5mi, E=8.9mi, F=23.4mi, G=15.5mi
 run1()
 
 ####################### SEGMENT C
@@ -33,7 +35,7 @@ segment <- "C"                       #EDIT
 depthToday <- USRvar$dc.0
 depthToday[which(depthToday < dMin)] <- NA
 depthToday[which(depthToday > dMax)] <- NA
-segmentLength <- 19.1 * 1609.34  #EDIT   A=7.8mi, B=2.4mi, C=19.1mi, D=23.5mi, E=8.9mi, F=23.4mi, G=15.5mi
+segmentLength <- 19.1 * distConv  #EDIT   A=7.8mi, B=2.4mi, C=19.1mi, D=23.5mi, E=8.9mi, F=23.4mi, G=15.5mi
 run1()
 
 ####################### SEGMENT D
@@ -41,7 +43,7 @@ segment <- "D"                       #EDIT
 depthToday <- USRvar$dd.0
 depthToday[which(depthToday < dMin)] <- NA
 depthToday[which(depthToday > dMax)] <- NA
-segmentLength <- 23.5 * 1609.34  #EDIT   A=7.8mi, B=2.4mi, C=19.1mi, D=23.5mi, E=8.9mi, F=23.4mi, G=15.5mi
+segmentLength <- 23.5 * distConv  #EDIT   A=7.8mi, B=2.4mi, C=19.1mi, D=23.5mi, E=8.9mi, F=23.4mi, G=15.5mi
 run1()
 
 ####################### SEGMENT E
@@ -49,7 +51,7 @@ segment <- "E"                       #EDIT
 depthToday <- USRvar$de.0
 depthToday[which(depthToday < dMin)] <- NA
 depthToday[which(depthToday > dMax)] <- NA
-segmentLength <- 8.9 * 1609.34  #EDIT   A=7.8mi, B=2.4mi, C=19.1mi, D=23.5mi, E=8.9mi, F=23.4mi, G=15.5mi
+segmentLength <- 8.9 * distConv  #EDIT   A=7.8mi, B=2.4mi, C=19.1mi, D=23.5mi, E=8.9mi, F=23.4mi, G=15.5mi
 run1()
 
 ####################### SEGMENT B
@@ -57,6 +59,6 @@ segment <- "B"                       #EDIT
 depthToday <- (USRvar$da.0 + USRvar$dc.0)/2
 depthToday[which(depthToday < dMin)] <- NA
 depthToday[which(depthToday > dMax)] <- NA
-segmentLength <- 2.4 * 1609.34  #EDIT   A=7.8mi, B=2.4mi, C=19.1mi, D=23.5mi, E=8.9mi, F=23.4mi, G=15.5mi
+segmentLength <- 2.4 * distConv  #EDIT   A=7.8mi, B=2.4mi, C=19.1mi, D=23.5mi, E=8.9mi, F=23.4mi, G=15.5mi
 run1()
 rm(list=ls())

@@ -1,10 +1,24 @@
-inFolder <- "C:\\Thesis\\LARB\\03 Thesis-Calcs\\4 Output Se Flux\\USR Output\\Deterministic"
-outFolder <- "C:\\Thesis\\LARB\\03 Thesis-Calcs\\4 Output Se Flux\\USR Output\\SA"
-stochFolder <- "C:\\Thesis\\LARB\\03 Thesis-Calcs\\4 Output Se Flux\\USR Output\\Stochastic"
+source("~/Projects/Calcs/R/USR SA/Pre-Loader.R")
 
-setwd(inFolder)
+do1River <- function(){
+  source("~/Projects/Calcs/R/USR SA/05 River Geometry.R")
+}
+do2Conc <- function(){
+  source("~/Projects/Calcs/R/USR SA/06 Conc Realizations.R")
+}
+do3Evap <- function(){
+  source("~/Projects/Calcs/R/USR SA/07 ETref to Evap Realizations.R")
+}
+do4Trans <- function(){
+  source("~/Projects/Calcs/R/USR SA/09 Transport and Storage.R")
+}
+do5Models <- function(){
+  source("~/Projects/Calcs/R/USR SA/10 Water and Mass Models.R")
+}
+
+setwd(models.D)
 load("calcData.Rdata")
-setwd(outFolder)
+setwd(models.SA)
 
 ii <- 1
 
@@ -96,33 +110,33 @@ for(ii in 1:85){
   if(ii == 84){name <- "depthE"; mod <- "-0.25ft"; cd2$dE1 <- calcData$dE1 - 0.25}
   if(ii == 85){name <- "base"; mod <- "none"}
   
-  source("C:\\Thesis\\LARB\\03 Thesis-Calcs\\4 Output Se Flux\\Scripts USR SA\\USR River Geometry.R")
-  source("C:\\Thesis\\LARB\\03 Thesis-Calcs\\4 Output Se Flux\\Scripts USR SA\\USR Conc Realizations.R")
-  source("C:\\Thesis\\LARB\\03 Thesis-Calcs\\4 Output Se Flux\\Scripts USR SA\\USR Transport and Storage.R")
-  source("C:\\Thesis\\LARB\\03 Thesis-Calcs\\4 Output Se Flux\\Scripts USR SA\\USR ETref to Evap Realizations.R")
-  source("C:\\Thesis\\LARB\\03 Thesis-Calcs\\4 Output Se Flux\\Scripts USR SA\\USR Water and Mass Models.R")
+  do1River()
+  do2Conc()
+  do3Evap()
+  do4Trans()
+  do5Models()
   
   if(ii == 1){
-    water <- data.frame(vName=name, Mod=mod, unknownWaterStatsStats[1:3], row.names=ii)
+    water <- data.frame(vName=name, Mod=mod, unknownWaterStatsStats[2], row.names=ii)
   }  else {
-    water <- rbind(water, data.frame(vName=name, Mod=mod, unknownWaterStatsStats[1:3], row.names=ii))
+    water <- rbind(water, data.frame(vName=name, Mod=mod, unknownWaterStatsStats[2], row.names=ii))
   }
     
   if(ii == 1){
-    mass <- data.frame(vName=name, Mod=mod, unknownMassStatsStats[1:3], row.names=ii)
+    mass <- data.frame(vName=name, Mod=mod, unknownMassStatsStats[2], row.names=ii)
   }  else {
-    mass <- rbind(mass, data.frame(vName=name, Mod=mod, unknownMassStatsStats[1:3], row.names=ii))
+    mass <- rbind(mass, data.frame(vName=name, Mod=mod, unknownMassStatsStats[2], row.names=ii))
   }
-
   print(ii); flush.console()
 }
 
 water <- cbind(water, dMean = (water$Mean - water$Mean[length(water$Mean)] )/ water$Mean[length(water$Mean)] * 100)
 mass <- cbind(mass, dMean = (mass$Mean - mass$Mean[length(mass$Mean)] )/ mass$Mean[length(mass$Mean)] * 100)
 
-water[,3:6] <- signif(water[,3:6], 4)
-mass[,3:6] <- signif(mass[,3:6], 4)
+water[,3:4] <- signif(water[,3:4], 3)
+mass[,3:4] <- signif(mass[,3:4], 3)
 
+setwd(results.SA)
 write.csv(water, file="water change.csv")
 write.csv(mass, file="mass change.csv")
 

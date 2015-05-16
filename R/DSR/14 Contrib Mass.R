@@ -27,6 +27,23 @@ stats <- t(data.frame(Store=ssStorage, Flow=ssFlow))
 setwd(resultsFile)
 write.csv(stats, "m contrib mass.csv")
 
+
+setwd("~/Projects/Text/Tables/")
+zz <- textConnection("foo", open="w")
+sink(zz)
+cat("\\begin{tabular}{cccc} \n",
+    "\\toprule \n",
+    "Model Portion  & 2.5\\% & Mean & 97.5\\% \\\\ \n",
+    "\\toprule \n",
+    "$ \\displaystyle \\frac{\\Delta S_M}{\\Delta t} $ & ", ssStorage[[1]],"  & ", ssStorage[[2]],"	& ", ssStorage[[3]]," \\\\ \n",
+    "\\\\ \n",
+    "$ \\displaystyle \\sum L_{Surface} $	& ", ssFlow[[1]],"  & ", ssFlow[[2]],"	& ", ssFlow[[3]]," \\\\ \n",
+    "\\bottomrule \n",
+    "\\end{tabular}", sep="")
+sink()
+close(zz)
+write(foo, "DSR M Contrib.txt", append=FALSE)
+
 polyStore <- polylims(dates, sStorage$P.025, sStorage$P.975)
 polyFlow <- polylims(dates, sFlow$P.025, sFlow$P.975)
 col1 <- rgb(1,0,0,.5)

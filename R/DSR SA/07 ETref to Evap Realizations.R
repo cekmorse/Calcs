@@ -1,4 +1,4 @@
-setwd(outFolder)
+setwd(models.SA)
 attach(cd2)
 
 # convert from short reference crop to tall via FAO 56 converted to quadratic form

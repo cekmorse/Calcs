@@ -1,4 +1,4 @@
-setwd(stochFolder)
+setwd(models.S)
 load(paste("c lm ",locate,".Rdata", sep=""))
 load(paste("c variables ",locate,".Rdata", sep=""))
 variables <- variables[-1]
@@ -16,7 +16,7 @@ if(variables[length(variables)] == "di"){
   subsetData <- data.frame(calcData[,variables])
 }
 
-setwd(outFolder)
+setwd(models.SA)
 
 if(locate == "WTP"){
   est <- predict(estim, newdata=subsetData)
@@ -25,6 +25,6 @@ if(locate == "WTP"){
 }
 
 est[est <= cMin] <- cMin
-setwd(outFolder)
+setwd(models.SA)
 
 save(est, file=paste("c ",lName,".Rdata",sep=""))

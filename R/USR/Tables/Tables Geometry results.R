@@ -1,7 +1,7 @@
 ##### General Setup #####
 source("~/Projects/Calcs/R/USR/Pre-Loader.R")
 
-tableFolder <- "~/Projects/Thesis/Thesis-Text/Tables/"
+tableFolder <- "~/Projects/Text/Tables/"
 setwd(modelsFile)
 load("date.Rdata")
 
