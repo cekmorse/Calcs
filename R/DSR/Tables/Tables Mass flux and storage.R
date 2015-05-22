@@ -8,7 +8,7 @@ run1 <- function(fileName) {
   x <- load(fileName); dx <- get(x); rm(list=x)
   return(list("dx"=dx, "sx"=sx))
 }
-saveFolder <- "~/Projects/Thesis/Thesis-Text/Tables/"
+saveFolder <- "~/Projects/Text/Tables/"
 scaleConvert <- 1          # original units of kg/day are good
 unitConvert <- 2.20462     # convert kg/day to lb/day
 

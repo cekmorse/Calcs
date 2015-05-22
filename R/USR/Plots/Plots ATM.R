@@ -1,6 +1,5 @@
 ##### General Setup #####
 source("~/Projects/Calcs/R/USR/Pre-Loader.R")
-source("~/Projects/Calcs/R/SubScripts/polylims.R")
 
 setwd(modelsFile)  # Set working directory
 

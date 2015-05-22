@@ -5,97 +5,60 @@ run <- function() {
   source("~/Projects/Calcs/R/SubScripts/River Geometry.R")
 }
 
-####################### SEGMENT A
-segment <- "A"                       #EDIT
-setwd(modelsFile)
-load("qin.Rdata")
-reals <- dim(q.in)[[2]]
-rm(q.in)
-setwd(dataFile)
-dataSet <- read.csv("Data.csv")
-depth <- dataSet$da.0                 #EDIT
-dates <- dataSet$DATE
-dates <- as.Date(dates, "%m/%d/%Y")
-segmentLength <- 7.8 * 1609.34 #EDIT   A=7.8mi, B=2.4mi, C=19.1mi, D=23.5mi, E=8.9mi, F=23.4mi, G=15.5mi
-setwd(modelsFile)
-load("USRB1.Rdata")
-load("USRB2.Rdata")
-load("USRBe.Rdata")
-b1Param1 <- USRB1$est[[1]]
-b1Param2 <- USRB1$est[[2]]
-b2Param1 <- USRB2$est[[1]]
-b2Param2 <- USRB2$est[[2]]
-beParam1 <- USRBe$est[[1]]
-beParam2 <- USRBe$est[[2]]
 dMin <- 0.5*0.3048
 dMax <- 5*0.3048
 wMin <- 5
 wMax <- 150
-times <- length(depth)
+setwd(dataFile)
+dataSet <- read.csv("Data.csv")
+dates <- dataSet$DATE
+dates <- as.Date(dates, "%m/%d/%Y")
+times <- length(dates)
+setwd(modelsFile)
+load("qin.Rdata")
+reals <- dim(q.in)[[2]]
+rm(q.in)
+load("USRB1.Rdata")
+load("USRB2.Rdata")
+load("USRBe.Rdata")
+b1Param1 <- USRB1$est[[1]]
+b1Param2 <- USRB1$est[[2]]
+b2Param1 <- USRB2$est[[1]]
+b2Param2 <- USRB2$est[[2]]
+beParam1 <- USRBe$est[[1]]
+beParam2 <- USRBe$est[[2]]
+
+####################### SEGMENT A
+segment <- "A"
+setwd(dataFile)
+depth <- dataSet$da.0
+segmentLength <- 7.8 * 1609.34 #   A=7.8mi, B=2.4mi, C=19.1mi, D=23.5mi, E=8.9mi, F=23.4mi, G=15.5mi
 run()
 
 ####################### SEGMENT C
-segment <- "C"                       #EDIT
-depth <- dataSet$dc.0                 #EDIT
-segmentLength <- 19.1 * 1609.34  #EDIT   A=7.8mi, B=2.4mi, C=19.1mi, D=23.5mi, E=8.9mi, F=23.4mi, G=15.5mi
-setwd(modelsFile)
-load("USRB1.Rdata")
-load("USRB2.Rdata")
-load("USRBe.Rdata")
-b1Param1 <- USRB1$est[[1]]
-b1Param2 <- USRB1$est[[2]]
-b2Param1 <- USRB2$est[[1]]
-b2Param2 <- USRB2$est[[2]]
-beParam1 <- USRBe$est[[1]]
-beParam2 <- USRBe$est[[2]]
+segment <- "C"
+setwd(dataFile)
+depth <- dataSet$dc.0
+segmentLength <- 19.1 * 1609.34 #   A=7.8mi, B=2.4mi, C=19.1mi, D=23.5mi, E=8.9mi, F=23.4mi, G=15.5mi
 run()
 
 ####################### SEGMENT D
-segment <- "D"                       #EDIT
-depth <- dataSet$dd.0                 #EDIT
-segmentLength <- 23.5 * 1609.34  #EDIT   A=7.8mi, B=2.4mi, C=19.1mi, D=23.5mi, E=8.9mi, F=23.4mi, G=15.5mi
-setwd(modelsFile)
-load("USRB1.Rdata")
-load("USRB2.Rdata")
-load("USRBe.Rdata")
-b1Param1 <- USRB1$est[[1]]
-b1Param2 <- USRB1$est[[2]]
-b2Param1 <- USRB2$est[[1]]
-b2Param2 <- USRB2$est[[2]]
-beParam1 <- USRBe$est[[1]]
-beParam2 <- USRBe$est[[2]]
+segment <- "D"
+setwd(dataFile)
+depth <- dataSet$dd.0
+segmentLength <- 23.5 * 1609.34 #   A=7.8mi, B=2.4mi, C=19.1mi, D=23.5mi, E=8.9mi, F=23.4mi, G=15.5mi
 run()
 
 ####################### SEGMENT E
-segment <- "E"                       #EDIT
-depth <- dataSet$de.0                 #EDIT
-segmentLength <- 8.9 * 1609.34  #EDIT   A=7.8mi, B=2.4mi, C=19.1mi, D=23.5mi, E=8.9mi, F=23.4mi, G=15.5mi
-setwd(modelsFile)
-load("USRB1.Rdata")
-load("USRB2.Rdata")
-load("USRBe.Rdata")
-b1Param1 <- USRB1$est[[1]]
-b1Param2 <- USRB1$est[[2]]
-b2Param1 <- USRB2$est[[1]]
-b2Param2 <- USRB2$est[[2]]
-beParam1 <- USRBe$est[[1]]
-beParam2 <- USRBe$est[[2]]
+segment <- "E"
+setwd(dataFile)
+depth <- dataSet$de.0
+segmentLength <- 8.9 * 1609.34 #   A=7.8mi, B=2.4mi, C=19.1mi, D=23.5mi, E=8.9mi, F=23.4mi, G=15.5mi
 run()
 
 ####################### SEGMENT B
 segment <- "B"                       #EDIT
 segmentLength <- 2.4 * 1609.34  #EDIT   A=7.8mi, B=2.4mi, C=19.1mi, D=23.5mi, E=8.9mi, F=23.4mi, G=15.5mi
-setwd(modelsFile)
-load("USRB1.Rdata")
-load("USRB2.Rdata")
-load("USRBe.Rdata")
-b1Param1 <- USRB1$est[[1]]
-b1Param2 <- USRB1$est[[2]]
-b2Param1 <- USRB2$est[[1]]
-b2Param2 <- USRB2$est[[2]]
-beParam1 <- USRBe$est[[1]]
-beParam2 <- USRBe$est[[2]]
-run()
 
 load("depthA1.Rdata")
 depthA <- depthToday

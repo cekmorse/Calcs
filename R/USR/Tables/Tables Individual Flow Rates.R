@@ -12,7 +12,7 @@ run1 <- function(findFile) {
   return(returnList)
 }
 
-textTablesFolder <- "~/Projects/Thesis/Thesis-Text/Tables/"
+textTablesFolder <- "~/Projects/Text/Tables/"
 
 # in m^3/(sec*km)
 scaleConvert <- 1           # no scaling

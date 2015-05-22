@@ -9,7 +9,7 @@ run1 <- function(loc) {
   return(list("dx"=dx, "sx"=sx))
 }
 
-saveFolder <- "~/Projects/Thesis/Thesis-Text/Tables/"
+saveFolder <- "~/Projects/Text/Tables/"
 
 # in m^3/(sec*km)
 scaleConvert <- 1             # no scaling
