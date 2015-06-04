@@ -11,7 +11,7 @@ load("date.Rdata")
 # Sum(unknown volume changes) = Sum(river storage changes) - Sum(Surface flows) - Sum(Atmospheric contributions)
 #
 ##############
-reachLengthMiles <- 38.9          	## in miles
+reachLengthMiles <- 38.9          	## in miles    61.7 USR  38.9 DSR
 reachLength <- reachLengthMiles * 1.609344	## in kilometers
 
 ##### Sum(river storage changes) #####
